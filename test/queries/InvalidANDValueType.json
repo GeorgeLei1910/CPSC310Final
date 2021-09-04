@@ -1,0 +1,17 @@
+{
+    "title": "Invalid AND Value Type",
+    "query": {
+      "WHERE": {
+        "AND": {}
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_dept",
+          "courses_id",
+          "courses_avg"
+        ]
+      }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

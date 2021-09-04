@@ -1,0 +1,28 @@
+{
+    "title": "SELECT dept, id, avg WHERE fail > 250 AND pass < 1",
+    "query": {
+        "WHERE": {
+            "AND": [
+                {
+                    "GT": {
+                        "courses_fail": 250
+                    }
+                },
+                {
+                    "LT": {
+                      "courses_pass": 1
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ]
+        }
+      },
+    "isQueryValid": true,
+    "result":[]
+}

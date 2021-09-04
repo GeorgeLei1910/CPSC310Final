@@ -1,0 +1,36 @@
+{
+    "title": "Complex order UP",
+    "query": {
+      "WHERE": {
+        "AND": [
+          {
+            "GT": {
+              "courses_avg": 95
+            }
+          },
+          {
+            "IS": {
+              "courses_dept": "apsc"
+            }
+          }
+        ]
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_dept",
+          "courses_id",
+          "courses_avg",
+          "courses_pass",
+          "courses_uuid"
+        ],
+        "ORDER": {
+          "dir": "LEFT",
+          "keys": [
+            "courses_uuid"
+          ]
+        }
+      }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,14 @@
+{
+    "title": "invalid idstring",
+    "query": {
+        "WHERE": {
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "school_dept"
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

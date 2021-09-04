@@ -1,0 +1,19 @@
+{
+    "title": "empty idstring",
+    "query": {
+        "WHERE": {
+          "LT": {
+              "courses_avg": 60
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "_dept",
+            "courses_id",
+            "courses_avg"
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

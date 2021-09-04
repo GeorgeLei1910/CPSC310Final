@@ -1,0 +1,64 @@
+{
+    "title": "Testing wildcard in front",
+    "query": {
+        "WHERE": {
+          "IS": {
+            "courses_uuid": "*5253"
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_uuid",
+            "courses_instructor",
+            "courses_avg"
+          ],
+          "ORDER": "courses_avg"
+        }
+      },
+    "isQueryValid": true,
+    "result": [
+        {
+           "courses_dept":"math",
+           "courses_uuid":"5253",
+           "courses_instructor":"",
+           "courses_avg":71.23
+        },
+        {
+           "courses_dept":"busi",
+           "courses_uuid":"65253",
+           "courses_instructor":"",
+           "courses_avg":71.47
+        },
+        {
+           "courses_dept":"engl",
+           "courses_uuid":"95253",
+           "courses_instructor":"brown, judy;paterson, erika",
+           "courses_avg":73.65
+        },
+        {
+           "courses_dept":"bams",
+           "courses_uuid":"35253",
+           "courses_instructor":"queyranne, maurice",
+           "courses_avg":82.09
+        },
+        {
+           "courses_dept":"mech",
+           "courses_uuid":"45253",
+           "courses_instructor":"",
+           "courses_avg":84.86
+        },
+        {
+           "courses_dept":"midw",
+           "courses_uuid":"25253",
+           "courses_instructor":"tba",
+           "courses_avg":87.4
+        },
+        {
+           "courses_dept":"biol",
+           "courses_uuid":"55253",
+           "courses_instructor":"",
+           "courses_avg":88.93
+        }
+     ]
+}

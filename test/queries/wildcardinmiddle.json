@@ -1,0 +1,21 @@
+{
+    "title": "Wildcard in the middle of string",
+    "query": {
+        "WHERE": {
+            "IS": {
+                "courses_instructor": "b* , a*"
+            }
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_instructor",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

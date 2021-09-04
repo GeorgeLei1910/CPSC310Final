@@ -1,0 +1,45 @@
+{
+    "title": "SELECT dept, id, avg WHERE fail > 250",
+    "query": {
+        "WHERE": {
+          "GT": {
+            "courses_fail": 250
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ]
+        }
+      },
+    "isQueryValid": true,
+    "result":[
+      {
+         "courses_dept":"chem",
+         "courses_id":"121",
+         "courses_avg":67.42
+      },
+      {
+         "courses_dept":"chem",
+         "courses_id":"121",
+         "courses_avg":68.72
+      },
+      {
+         "courses_dept":"chem",
+         "courses_id":"121",
+         "courses_avg":68.2
+      },
+      {
+         "courses_dept":"chem",
+         "courses_id":"121",
+         "courses_avg":68.77
+      },
+      {
+         "courses_dept":"chem",
+         "courses_id":"121",
+         "courses_avg":69.41
+      }
+   ]
+}

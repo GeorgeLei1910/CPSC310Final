@@ -1,0 +1,12 @@
+{
+    "title": "Missing OPTIONS",
+    "query": {
+      "WHERE": {
+        "EQ": {
+          "courses_fail": 50
+        }
+      }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

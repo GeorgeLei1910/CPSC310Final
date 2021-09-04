@@ -1,0 +1,15 @@
+{
+    "title": "Access multiple dataset",
+    "query": {
+        "WHERE": {
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_id",
+            "rooms_id"
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

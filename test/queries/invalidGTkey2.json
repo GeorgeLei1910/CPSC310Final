@@ -1,0 +1,19 @@
+{
+    "title": "invalid GT key 2",
+    "query": {
+        "WHERE": {
+          "GT": {
+              "courses_title": 2
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

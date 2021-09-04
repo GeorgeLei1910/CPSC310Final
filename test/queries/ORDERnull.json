@@ -1,0 +1,102 @@
+{
+    "title": "Columns present but default order",
+    "query": {  "WHERE": {
+        "OR": [
+            {
+                "EQ":{
+                    "courses_fail": 200
+                }
+            },{
+                "GT":{
+                    "courses_fail": 200
+                }
+            }
+        ]
+    },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_fail"
+            ]
+        }
+    },
+    "isQueryValid": true,
+    "result": [
+        {
+            "courses_dept": "biol",
+            "courses_id": "112",
+            "courses_fail": 230
+        },
+        {
+            "courses_dept": "biol",
+            "courses_id": "200",
+            "courses_fail": 204
+        },
+        {
+            "courses_dept": "chem",
+            "courses_id": "121",
+            "courses_fail": 266
+        },
+        {
+            "courses_dept": "chem",
+            "courses_id": "121",
+            "courses_fail": 264
+        },
+        {
+            "courses_dept": "chem",
+            "courses_id": "121",
+            "courses_fail": 235
+        },
+        {
+            "courses_dept": "chem",
+            "courses_id": "121",
+            "courses_fail": 250
+        },
+        {
+            "courses_dept": "chem",
+            "courses_id": "121",
+            "courses_fail": 287
+        },
+        {
+            "courses_dept": "chem",
+            "courses_id": "121",
+            "courses_fail": 260
+        },
+        {
+            "courses_dept": "chem",
+            "courses_id": "121",
+            "courses_fail": 251
+        },
+        {
+            "courses_dept": "chem",
+            "courses_id": "233",
+            "courses_fail": 213
+        },
+        {
+            "courses_dept": "chem",
+            "courses_id": "233",
+            "courses_fail": 226
+        },
+        {
+            "courses_dept": "econ",
+            "courses_id": "101",
+            "courses_fail": 221
+        },
+        {
+            "courses_dept": "math",
+            "courses_id": "101",
+            "courses_fail": 222
+        },
+        {
+            "courses_dept": "math",
+            "courses_id": "101",
+            "courses_fail": 203
+        },
+        {
+            "courses_dept": "math",
+            "courses_id": "101",
+            "courses_fail": 205
+        }
+    ]
+}

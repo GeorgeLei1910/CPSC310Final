@@ -1,0 +1,89 @@
+{
+    "title": "SELECT dept, id, avg WHERE fail > 250 OR pass < 1",
+    "query": {
+        "WHERE": {
+            "OR": [
+                {
+                    "GT": {
+                        "courses_fail": 250
+                    }
+                },
+                {
+                    "LT": {
+                      "courses_pass": 1
+                    }
+                }
+            ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ]
+        }
+      },
+    "isQueryValid": true,
+    "result":[
+        {
+           "courses_dept":"busi",
+           "courses_id":"330",
+           "courses_avg":4
+        },
+        {
+           "courses_dept":"busi",
+           "courses_id":"330",
+           "courses_avg":4
+        },
+        {
+           "courses_dept":"chem",
+           "courses_id":"121",
+           "courses_avg":67.42
+        },
+        {
+           "courses_dept":"chem",
+           "courses_id":"121",
+           "courses_avg":68.72
+        },
+        {
+           "courses_dept":"chem",
+           "courses_id":"121",
+           "courses_avg":68.2
+        },
+        {
+           "courses_dept":"chem",
+           "courses_id":"121",
+           "courses_avg":68.77
+        },
+        {
+           "courses_dept":"chem",
+           "courses_id":"121",
+           "courses_avg":69.41
+        },
+        {
+           "courses_dept":"fopr",
+           "courses_id":"362",
+           "courses_avg":4.5
+        },
+        {
+           "courses_dept":"frst",
+           "courses_id":"202",
+           "courses_avg":0
+        },
+        {
+           "courses_dept":"lfs",
+           "courses_id":"100",
+           "courses_avg":0
+        },
+        {
+           "courses_dept":"lfs",
+           "courses_id":"100",
+           "courses_avg":0
+        },
+        {
+           "courses_dept":"wood",
+           "courses_id":"475",
+           "courses_avg":1
+        }
+     ]
+}

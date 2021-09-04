@@ -1,0 +1,39 @@
+{
+    "title": "SELECT dept, id, avg WHERE fail > 60 AND pass < 200 AND instructor IS '*'",
+    "query": {
+      "WHERE": {
+        "AND": [
+          {
+            "GT": {
+              "courses_fail": 60
+            }
+          },
+          {
+            "LT": {
+              "courses_pass": 200,
+            }
+          },
+          {
+            "IS": {
+              "courses_instructor": "*"
+            }
+          }
+        ]
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_dept",
+          "courses_id",
+          "courses_avg"
+        ]
+      }
+    },
+    "isQueryValid": true,
+    "result": [
+      {
+         "courses_dept":"chem",
+         "courses_id":"121",
+         "courses_avg":57.25
+      }
+   ]
+}

@@ -1,0 +1,17 @@
+{
+    "title": "empty IS",
+    "query": {
+        "WHERE": {
+          "IS": {}
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

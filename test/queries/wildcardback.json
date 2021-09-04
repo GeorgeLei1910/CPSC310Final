@@ -1,0 +1,46 @@
+{
+    "title": "Testing Wildcard at back of string",
+    "query": {
+        "WHERE": {
+          "IS": {
+            "courses_uuid": "2839*"
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_uuid",
+            "courses_instructor",
+            "courses_avg"
+          ],
+          "ORDER": "courses_avg"
+        }
+      },
+    "isQueryValid": true,
+    "result": [
+        {
+           "courses_dept":"comm",
+           "courses_uuid":"28399",
+           "courses_instructor":"",
+           "courses_avg":56.63
+        },
+        {
+           "courses_dept":"fist",
+           "courses_uuid":"28392",
+           "courses_instructor":"mathijs, ernest",
+           "courses_avg":84.72
+        },
+        {
+           "courses_dept":"fist",
+           "courses_uuid":"28393",
+           "courses_instructor":"",
+           "courses_avg":84.72
+        },
+        {
+           "courses_dept":"civl",
+           "courses_uuid":"2839",
+           "courses_instructor":"",
+           "courses_avg":89.75
+        }
+     ]
+}

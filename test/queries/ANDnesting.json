@@ -1,0 +1,66 @@
+{
+    "title": "Nesting AND",
+    "query": {
+        "WHERE": {
+            "AND":[
+                {
+                    "AND": [
+                        {
+                            "GT": {
+                                "courses_avg": 90
+                            }
+                        },{
+                            "LT": {
+                                "courses_avg": 90.2
+                            }
+                        }
+                    ]
+                },{
+                    "OR": [
+                        {
+                            "IS": {
+                                "courses_dept": "cpsc"
+                            }
+                        },{
+                            "IS": {
+                                "courses_dept": "cpen"
+                            }
+                        }
+
+                    ]
+                }
+            ]
+        },
+        "OPTIONS": {
+            "COLUMNS": [
+                "courses_dept",
+                "courses_id",
+                "courses_instructor",
+                "courses_avg"
+            ],
+            "ORDER": "courses_avg"
+        }
+    },
+    "isQueryValid": true,
+
+    "result": [
+        {
+            "courses_dept":"cpsc",
+            "courses_id":"527",
+            "courses_instructor":"krasic, charles",
+            "courses_avg":90.11
+        },
+        {
+            "courses_dept":"cpsc",
+            "courses_id":"527",
+            "courses_instructor":"",
+            "courses_avg":90.11
+        },
+        {
+            "courses_dept":"cpsc",
+            "courses_id":"490",
+            "courses_instructor":"",
+            "courses_avg":90.14
+        }
+    ]
+}

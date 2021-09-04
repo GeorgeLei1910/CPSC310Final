@@ -1,0 +1,16 @@
+{
+    "title": "conflicting rooms and courses COLUMNS key",
+    "query": {
+      "WHERE": {
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_dept",
+          "courses_id",
+          "courses_lat"
+        ]
+      }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

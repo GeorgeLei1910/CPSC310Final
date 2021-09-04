@@ -1,0 +1,19 @@
+{
+    "title": "invalid skey",
+    "query": {
+        "WHERE": {
+          "IS": {
+            "courses_ta": "*"
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

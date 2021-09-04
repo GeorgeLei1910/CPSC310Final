@@ -1,0 +1,32 @@
+{
+    "title": "empty APPLY",
+    "query": {
+        "WHERE": {
+          "IS": {
+            "courses_title": "dev e*"
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_title",
+            "overallAvg"
+          ],
+          "ORDER": {
+            "dir": "UP",
+            "keys": [
+              "overallAvg",
+              "courses_title"
+            ]
+          }
+        },
+        "TRANSFORMATIONS": {
+          "GROUP": [
+            "courses_title"
+          ],
+          "APPLY": [
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

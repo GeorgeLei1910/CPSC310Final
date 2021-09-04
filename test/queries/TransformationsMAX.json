@@ -1,0 +1,43 @@
+{
+    "title": "Transformation MAX",
+    "query": {
+      "WHERE": {
+        "IS": {
+          "courses_title": "dev e*"
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_title",
+          "maxAvg"
+        ]
+      },
+      "TRANSFORMATIONS": {
+        "GROUP": [
+          "courses_title"
+        ],
+        "APPLY": [
+          {
+            "maxAvg": {
+              "MAX": "courses_avg"
+            }
+          }
+        ]
+      }
+    },
+    "isQueryValid": true,
+    "result": [
+      {
+         "courses_title":"dev el sk df&hrd",
+         "maxAvg":98.45
+      },
+      {
+         "courses_title":"dev envnmt thght",
+         "maxAvg":78.57
+      },
+      {
+         "courses_title":"dev effective pr",
+         "maxAvg":88.78
+      }
+   ]
+}

@@ -1,0 +1,33 @@
+{
+    "title": "Complex case of an invalid NOT statement",
+    "query": {
+        "WHERE": {
+          "AND": [
+            {
+              "IS": {
+                "courses_instructor": "*Bob*"
+              }
+            },
+            {
+              "NOT": {
+                "IS": {
+                  "courses_dept": "Math"
+                },
+                "EQ": {
+                  "courses_avg": 50
+                }
+              }
+            }
+          ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_avg",
+            "courses_dept"
+          ],
+          "ORDER": "courses_avg"
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,20 @@
+{
+    "title": "Invalid EQ",
+    "query": {
+        "WHERE": {
+          "EQ": {
+            "courses_fail": 50,
+            "courses_avg": 50
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

@@ -1,0 +1,66 @@
+{
+    "title": "duplicate apply token",
+    "query": {
+      "WHERE": {
+        "AND": [
+          {
+            "IS": {
+              "courses_title": "math prblm slvng"
+            }
+          },
+          {
+            "IS": {
+              "courses_instructor": "*,*"
+            }
+          }
+        ]
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_title",
+          "courses_instructor",
+          "overallAvg",
+          "overallPass"
+        ]
+      },
+      "TRANSFORMATIONS": {
+        "GROUP": [
+          "courses_title",
+          "courses_instructor"
+        ],
+        "APPLY": [
+          {
+            "overallAvg": {
+              "AVG": "courses_avg"
+            }
+          },
+          {
+            "overallPass": {
+              "AVG": "courses_pass"
+            }
+          }
+        ]
+      }
+    },
+    "isQueryValid": true,
+    "result": [
+      {
+         "courses_title":"math prblm slvng",
+         "courses_instructor":"anderson, ann",
+         "overallAvg":86.23,
+         "overallPass":19.5
+      },
+      {
+         "courses_title":"math prblm slvng",
+         "courses_instructor":"lucus, calin",
+         "overallAvg":92.64,
+         "overallPass":17.5
+      },
+      {
+         "courses_title":"math prblm slvng",
+         "courses_instructor":"jeroff, debra",
+         "overallAvg":90.95,
+         "overallPass":19
+      }
+   ]
+}

@@ -1,0 +1,19 @@
+{
+    "title": "Invalid LT key",
+    "query": {
+        "WHERE": {
+          "LT": {
+            "courses_ta": 50
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

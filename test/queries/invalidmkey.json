@@ -1,0 +1,19 @@
+{
+    "title": "invalid mkey",
+    "query": {
+        "WHERE": {
+            "EQ": {
+                "courses_ta": 5
+            }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_dept",
+            "courses_id",
+            "courses_avg"
+          ]
+        }
+      },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

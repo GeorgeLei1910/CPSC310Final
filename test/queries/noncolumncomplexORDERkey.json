@@ -1,0 +1,37 @@
+{
+    "title": "Complex order key not in columns",
+    "query": {
+      "WHERE": {
+        "AND": [
+          {
+            "GT": {
+              "courses_avg": 95
+            }
+          },
+          {
+            "IS": {
+              "courses_dept": "apsc"
+            }
+          }
+        ]
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_dept",
+          "courses_id",
+          "courses_avg",
+          "courses_pass",
+          "courses_uuid"
+        ],
+        "ORDER": {
+          "dir": "UP",
+          "keys": [
+            "courses_instructor",
+            "courses_uuid"
+          ]
+        }
+      }
+    },
+    "isQueryValid": false,
+    "result": "InsightError"
+}

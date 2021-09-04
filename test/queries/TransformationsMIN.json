@@ -1,0 +1,43 @@
+{
+    "title": "Transformation MIN",
+    "query": {
+      "WHERE": {
+        "IS": {
+          "courses_title": "dev e*"
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_title",
+          "minAvg"
+        ]
+      },
+      "TRANSFORMATIONS": {
+        "GROUP": [
+          "courses_title"
+        ],
+        "APPLY": [
+          {
+            "minAvg": {
+              "MIN": "courses_avg"
+            }
+          }
+        ]
+      }
+    },
+    "isQueryValid": true,
+    "result": [
+      {
+         "courses_title":"dev el sk df&hrd",
+         "minAvg":82.3
+      },
+      {
+         "courses_title":"dev envnmt thght",
+         "minAvg":67.82
+      },
+      {
+         "courses_title":"dev effective pr",
+         "minAvg":81.15
+      }
+   ]
+}

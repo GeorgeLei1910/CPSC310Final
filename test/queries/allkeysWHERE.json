@@ -1,0 +1,81 @@
+{
+    "title": "SELECT avg WHERE avg < 60 AND pass < 1 AND fail < 60 AND year < 2000 AND audit < 10 AND id IS '100' AND instructor IS '*' AND title IS '*' AND uuid IS '*'",
+    "query": {
+        "WHERE": {
+           "AND": [
+              {
+                 "EQ": {
+                    "courses_avg": 99.19
+                 }
+              },
+              {
+                 "EQ": {
+                     "courses_pass": 16
+                 }
+              },
+              {
+                 "EQ": {
+                    "courses_fail": 0
+                 }
+              },
+              {
+                 "EQ": {
+                    "courses_year": 2012
+                 }
+              },
+              {
+                 "EQ": {
+                    "courses_audit": 0
+                 }
+              },
+              {
+                 "IS": {
+                    "courses_id": "574"
+                 }
+              },
+              {
+                  "IS": {
+                     "courses_instructor": "cox, daniel"
+                  }
+              },
+              {
+                  "IS": {
+                     "courses_title": "career planning"
+                  }
+              },
+              {
+                  "IS": {
+                     "courses_uuid": "26777"
+                  }
+              }
+           ]
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_avg",
+            "courses_pass",
+            "courses_fail",
+            "courses_audit",
+            "courses_year",
+            "courses_id",
+            "courses_instructor",
+            "courses_title",
+            "courses_uuid"
+          ]
+        }
+      },
+    "isQueryValid": true,
+    "result": [
+      {
+         "courses_avg":99.19,
+         "courses_pass":16,
+         "courses_fail":0,
+         "courses_audit":0,
+         "courses_year":2012,
+         "courses_id":"574",
+         "courses_instructor":"cox, daniel",
+         "courses_title":"career planning",
+         "courses_uuid":"26777"
+      }
+   ]
+}

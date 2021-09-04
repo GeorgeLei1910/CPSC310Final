@@ -1,0 +1,43 @@
+{
+    "title": "Transformation AVG",
+    "query": {
+        "WHERE": {
+          "IS": {
+            "courses_title": "dev e*"
+          }
+        },
+        "OPTIONS": {
+          "COLUMNS": [
+            "courses_title",
+            "overallAvg"
+          ]
+        },
+        "TRANSFORMATIONS": {
+          "GROUP": [
+            "courses_title"
+          ],
+          "APPLY": [
+            {
+              "overallAvg": {
+                "AVG": "courses_avg"
+              }
+            }
+          ]
+        }
+      },
+    "isQueryValid": true,
+    "result": [
+        {
+           "courses_title":"dev el sk df&hrd",
+           "overallAvg":88.17
+        },
+        {
+           "courses_title":"dev envnmt thght",
+           "overallAvg":75.32
+        },
+        {
+           "courses_title":"dev effective pr",
+           "overallAvg":85.14
+        }
+     ]
+}

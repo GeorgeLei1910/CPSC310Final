@@ -1,0 +1,43 @@
+{
+    "title": "Transformation SUM",
+    "query": {
+      "WHERE": {
+        "IS": {
+          "courses_title": "dev e*"
+        }
+      },
+      "OPTIONS": {
+        "COLUMNS": [
+          "courses_title",
+          "sumPass"
+        ]
+      },
+      "TRANSFORMATIONS": {
+        "GROUP": [
+          "courses_title"
+        ],
+        "APPLY": [
+          {
+            "sumPass": {
+              "SUM": "courses_pass"
+            }
+          }
+        ]
+      }
+    },
+    "isQueryValid": true,
+    "result": [
+      {
+         "courses_title":"dev el sk df&hrd",
+         "sumPass":92
+      },
+      {
+         "courses_title":"dev envnmt thght",
+         "sumPass":520
+      },
+      {
+         "courses_title":"dev effective pr",
+         "sumPass":628
+      }
+   ]
+}
